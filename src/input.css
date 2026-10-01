@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  
+    /* Префикс --color- перед названием переменной автоматически говорит Tailwind v4, что это новый цвет, который нужно добавить в палитру. */
+
+	/* Цвет фона бежевый: #F5F5F5 */
+	--color-bg-main: #F5F5F5;
+	/* Цвет фона оранжевый: #EE6055 */
+	--color-bg-accent: #EE6055;
+	/* Цвет фона оранжевый светлый: #F07775 */
+	--color-bg-light: #F07775;
+	/* Цвет фона оранжевый светлый: #A52422 */
+	--color-bg-dark: #A52422;
+    /* Цвет текста лого бордовый: #A52425 */
+	--color-txt-logo: #A52425;
+	/* Цвет текста карточка красный */
+	--color-txt-card-red: #A62B2F;
+	/* Цвет текста карточка темный */
+	--color-txt-card-dark: #2C2829;
+	/* Цвет текста карточка еще темнее */
+	--color-card-darker: #252323;
+
+	/* Шрифт */
+	--font-inter: "Inter", sans-serif;
+	}

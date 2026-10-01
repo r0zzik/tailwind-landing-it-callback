@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class=" scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключаем файл именно из папки public! -->
+    <link rel="stylesheet" href="./public/output.css">
+
+    <title>Project Tailwind 3</title>
+</head>
+<body class="bg-bg-main min-h-screen font-inter">
+
+    <!-- ХЭДЕР -->
+
+    <header class="w-full bg-bg-main">
+        <div class="max-w-7xl mx-auto px-4 lg:px-16 py-8 lg:py-12 flex justify-between items-center relative">
+            <a href="#" class="text-2xl font-extrabold whitespace-nowrap hover:scale-105 transition-transform duration-300 cursor-pointer">iT-<span class="text-txt-logo">CALLBACK.</span></a>
+            <button class="w-14 h-12 flex flex-col items-center justify-center gap-2 border border-bg-dark rounded md:hidden hover:scale-105 transition-transform duration-300 cursor-pointer" id="burger">
+                <span class="block h-0.5 w-8 bg-black transition-all"></span>
+                <span class="block h-0.5 w-8 bg-black transition-all"></span>
+                <span class="block h-0.5 w-8 bg-black transition-all"></span>
+            </button>
+            <nav class="absolute top-[calc(100%-2rem)] right-4 bg-bg-light flex flex-col gap-4 p-5 rounded hidden md:w-auto md:relative md:top-auto md:right-0 md:bg-transparent md:flex md:flex-row md:gap-6 md:items-center md:px-0" id="nav">
+                <a href="#main" class="text-sm lg:text-base text-black font-medium hover:scale-105 transition-transform duration-300 cursor-pointer ">Главная</a>
+                <a href="#courses" class="text-sm lg:text-base text-black font-medium hover:scale-105 transition-transform duration-300 cursor-pointer">Курсы</a>
+                <a href="#prices" class="text-sm lg:text-base text-black font-medium hover:scale-105 transition-transform duration-300 cursor-pointer">Цены</a>
+                <a href="#contacts" class="text-sm lg:text-base text-black font-medium hover:scale-105 transition-transform duration-300 cursor-pointer">Контакты</a>
+                <a href="#install" class="text-sm lg:text-base text-black font-medium bg-bg-dark px-6 py-2 rounded-xl hover:scale-105 transition-transform duration-300 cursor-pointer">Попробовать бесплатно</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- СЕКЦИЯ 1 БЕЖЕВАЯ ХИРО -->
+
+    <section class="w-full bg-bg-main" id="main">
+        <div class="max-w-7xl mx-auto px-4 lg:px-16 py-8 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-8 items-center">
+            <div class="min-w-0">
+                <h1 class="text-3xl lg:text-4xl font-bold text-black mb-4">Начните свой путь к обучению сегодня!</h1>
+                <p class="text-base lg:text-lg font-normal text-black mb-6">Получите доступ к сотням курсов от лучших преподавателей</p>
+                <a href="./src/files/courses.pdf" download class="text-base lg:text-lg font-medium bg-bg-dark px-6 py-3 rounded-xl inline-block hover:scale-105 transition-transform duration-300 cursor-pointer">Скачать</a>
+            </div>
+            <img src="./src/images/Hero-Img.jpg" alt="Иллюстрация" class="w-2/3 mx-auto md:w-4/5 max-w-full min-w-0">
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ 2 ОРАНЖЕВАЯ КУРСЫ -->
+
+    <section class="w-full bg-bg-accent" id="courses">
+        <div class="max-w-7xl mx-auto px-8 py-10 md:py-20 flex flex-col items-center text-center gap-4 md:gap-6">
+            <p class="text-sm lg:text-lg text-txt-card-red font-medium">Выберите ваш курс</p>
+            <h2 class="text-3xl text-txt-card-dark font-bold mb-4">Разнообразие тем и направлений</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 w-full">
+                <article class="bg-bg-accent flex flex-col items-center gap-4 border border-white rounded-2xl px-4 py-12 hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <div class="bg-bg-dark pr-4 pl-5 py-3 mb-2 rounded-2xl flex justify-center items-center">
+                        <img class="w-14 h-14 object-cover" src="./src/images/Calendar.svg" alt="Календарь">
+                    </div>
+                    <h4 class="text-txt-card-dark text-lg font-bold">Детальный план занятий</h4>
+                    <p class="text-txt-card-dark text-sm font-normal">Учитесь, когда Вам удобно</p>
+                </article>
+                <article class="bg-bg-light flex flex-col items-center gap-4 border border-white rounded-2xl px-4 py-12 hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <div class="bg-bg-dark pr-4 pl-5 py-3 mb-2 rounded-2xl flex justify-center items-center">
+                        <img class="w-14 h-14 object-cover" src="./src/images/Calendar.svg" alt="Календарь">
+                    </div>
+                    <h4 class="text-txt-card-dark text-lg font-bold">Детальный план занятий</h4>
+                    <p class="text-txt-card-dark text-sm font-normal">Учитесь, когда Вам удобно</p>
+                </article>
+                <article class="bg-bg-accent flex flex-col items-center gap-4 border border-white rounded-2xl px-4 py-12 hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <div class="bg-bg-dark pr-4 pl-5 py-3 mb-2 rounded-2xl flex justify-center items-center">
+                        <img class="w-14 h-14 object-cover" src="./src/images/Calendar.svg" alt="Календарь">
+                    </div>
+                    <h4 class="text-txt-card-dark text-lg font-bold">Детальный план занятий</h4>
+                    <p class="text-txt-card-dark text-sm font-normal">Учитесь, когда Вам удобно</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ 3 БЕЖЕВАЯ О НАС -->
+
+    <section class="w-full bg-bg-main" id="about">
+        <div class="max-w-7xl mx-auto px-4 lg:px-16 py-12 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-8 items-center">
+            <img src="./src/images/Hero-Img.jpg" alt="Иллюстрация" class="w-2/3 mx-auto md:w-4/5 max-w-full min-w-0">
+            <div class="min-w-0">
+                <p class="text-sm lg:text-lg text-txt-card-red font-medium mb-4">Наше будущее</p>
+                <h1 class="text-3xl lg:text-4xl font-semibold text-black mb-4">Lorem ipsum dolor sit amet consectetur adipisicing</h1>
+                <p class="text-base lg:text-lg font-normal text-black mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quo ipsam</p>
+                <a href="#" class="text-base lg:text-lg font-medium bg-bg-dark px-6 py-3 rounded-xl inline-block hover:scale-105 transition-transform duration-300 cursor-pointer">Подробнее</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ 4 ОРАНЖЕВАЯ УСТАНОВИТЬ ПРИЛОЖЕНИЕ-->
+
+    <section class="w-full bg-bg-accent" id="install">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-20 flex flex-col items-center text-center gap-2 md:gap-6">
+            <p class="text-sm lg:text-lg text-txt-card-red font-medium">Как это работает?</p>
+            <h2 class="text-3xl text-txt-card-dark font-bold mb-4">Все очень просто!</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 w-full">
+                <article class="bg-bg-accent flex flex-col items-center gap-4 px-4 py-4 md:py-12 hover:scale-105 transition-transform duration-300">
+                    <div class="bg-bg-light w-24 h-24 mb-2 rounded-2xl flex justify-center items-center">
+                        <p class="text-card-darker text-7xl font-light">1</p>
+                    </div>
+                    <h4 class="text-txt-card-dark text-lg font-bold">Установить приложение</h4>
+                    <p class="text-txt-card-dark text-sm font-normal">Вы можете просматривать свой прогресс</p>
+                </article>
+                <article class="bg-bg-accent flex flex-col items-center gap-4 px-4 py-4 md:py-12 hover:scale-105 transition-transform duration-300">
+                    <div class="bg-bg-dark w-24 h-24 mb-2 rounded-2xl flex justify-center items-center">
+                        <p class="text-card-darker text-7xl font-light">2</p>
+                    </div>
+                    <h4 class="text-txt-card-dark text-lg font-bold">Добавить профиль</h4>
+                    <p class="text-txt-card-dark text-sm font-normal">Персонализируйте вашу страницу</p>
+                </article>
+                <article class="bg-bg-accent flex flex-col items-center gap-4 px-4 py-4 md:py-12 hover:scale-105 transition-transform duration-300">
+                    <div class="bg-bg-light w-24 h-24 mb-2 rounded-2xl flex justify-center items-center">
+                        <p class="text-card-darker text-7xl font-light">3</p>
+                    </div>
+                    <h4 class="text-txt-card-dark text-lg font-bold">Наслаждаться обучением</h4>
+                    <p class="text-txt-card-dark text-sm font-normal">Вы можете начать уже сегодня</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ 5 ОРАНЖЕВАЯ ЦЕНЫ-->
+
+    <section class="w-full bg-bg-accent" id="prices">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 flex flex-col items-center text-center gap-2 md:gap-6">
+            <p class="text-sm lg:text-lg text-txt-card-red font-medium">Сколько будет стоить?</p>
+            <h2 class="text-3xl text-txt-card-dark font-bold mb-1">Оформи на год и получи скидку!</h2>
+            <div class="flex justify-center items-center gap-4 mb-4">
+                <p class="text-txt-card-dark text-lg lg:text-xl font-bold" id="labelMonth">Месяц</p>
+                <button class="h-8 w-28 p-0.5 border border-white rounded-full transition-all cursor-pointer" id="toggle">
+                    <span class="block h-full aspect-square bg-card-darker rounded-full transition-tranform dutation-300" id="knob"></span>
+                </button>
+                <p class="text-txt-card-dark text-lg lg:text-xl font-normal" id="labelYear">Год</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 w-full">
+                <article class="bg-bg-accent flex flex-col items-start text-start gap-2 border border-white rounded-2xl pt-8 pb-6 px-10 hover:scale-105 transition-transform duration-300">
+                    <p class="text-txt-card-dark text-base font-normal mb-2 relative">
+                        <span class="absolute -top-1 left-0 font-bold">₽</span>
+                        <span class="text-card-darker text-5xl font-semibold ml-3" id="priceBasic">200</span>
+                        /рублей в месяц</p>
+                    <h4 class="text-txt-card-dark text-xl font-bold">Базовый</h4>
+                    <p class="text-txt-card-dark text-base font-normal">Для тех кому нужно иметь базовый функционал</p>
+                    <ul class="text-txt-card-dark text-base font-normal my-2">
+                        <li class="flex flex-center items-center gap-2 py-2">
+                            <img class="w-5 h-5 mr-2 shrink-0" src="./src/images/Bookmark-red.svg" alt="Bookmark">
+                            Базовый менеджмент
+                        </li>
+                        <li class="flex flex-center items-center gap-2 py-2">
+                            <img class="w-5 h-5 mr-2 shrink-0" src="./src/images/Bookmark-red.svg" alt="Bookmark">
+                            Базовый менеджмент
+                        </li>
+                        <li class="flex flex-center items-center gap-2 py-2">
+                            <img class="w-5 h-5 mr-2 shrink-0" src="./src/images/Bookmark-red.svg" alt="Bookmark">
+                            Базовый менеджмент
+                        </li>
+                        <li class="flex flex-center items-center gap-2 py-2">
+                            <img class="w-5 h-5 mr-2 shrink-0" src="./src/images/Bookmark-white.svg" alt="Bookmark">
+                            Базовый менеджмент
+                        </li>
+                    </ul>
+                    <button class="w-full bg-bg-light px-2 py-2 mt-auto rounded-lg text-txt-card-dark text-lg font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">Начать</button>
+                </article>
+                <article class="bg-bg-accent flex flex-col items-start text-start gap-2 border border-white rounded-2xl pt-8 pb-6 px-10 hover:scale-105 transition-transform duration-300">
+                    <p class="text-txt-card-dark text-base font-normal mb-2 relative">
+                        <span class="absolute -top-1 left-0 font-bold">₽</span>
+                        <span class="text-card-darker text-5xl font-semibold ml-3" id="priceStandart">350</span>
+                        /рублей в месяц</p>
+                    <h4 class="text-txt-card-dark text-xl font-bold">Стандарт</h4>
+                    <p class="text-txt-card-dark text-base font-normal">Для тех кому нужно иметь стандартный функционал</p>
+                    <ul class="text-txt-card-dark text-base font-normal my-2">
+                        <li class="flex flex-center items-center gap-2 py-2">
+                            <img class="w-5 h-5 mr-2 shrink-0" src="./src/images/Bookmark-red.svg" alt="Bookmark">
+                            Стандартный менеджмент
+                        </li>
+                        <li class="flex flex-center items-center gap-2 py-2">
+                            <img class="w-5 h-5 mr-2 shrink-0" src="./src/images/Bookmark-red.svg" alt="Bookmark">
+                            Стандартный менеджмент
+                        </li>
+                        <li class="flex flex-center items-center gap-2 py-2">
+                            <img class="w-5 h-5 mr-2 shrink-0" src="./src/images/Bookmark-red.svg" alt="Bookmark">
+                            Стандартный менеджмент
+                        </li>
+                        <li class="flex flex-center items-center gap-2 py-2">
+                            <img class="w-5 h-5 mr-2 shrink-0" src="./src/images/Bookmark-white.svg" alt="Bookmark">
+                            Стандартный менеджмент
+                        </li>
+                    </ul>
+                    <button class="w-full bg-bg-light px-2 py-2 mt-auto rounded-lg text-txt-card-dark text-lg font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">Начать</button>
+                </article>
+                <article class="bg-bg-accent flex flex-col items-start text-start gap-2 border border-white rounded-2xl pt-8 pb-6 px-10 hover:scale-105 transition-transform duration-300">
+                    <p class="text-txt-card-dark text-base font-normal mb-2 relative">
+                        <span class="absolute -top-1 left-0 font-bold">₽</span>
+                        <span class="text-card-darker text-5xl font-semibold ml-3" id="pricePro">800</span>
+                        /рублей в месяц</p>
+                    <h4 class="text-txt-card-dark text-xl font-bold">Профи</h4>
+                    <p class="text-txt-card-dark text-base font-normal">Для тех кому нужно иметь профессиональный функционал</p>
+                    <ul class="text-txt-card-dark text-base font-normal my-2">
+                        <li class="flex flex-center items-center gap-2 py-2">
+                            <img class="w-5 h-5 mr-2 shrink-0" src="./src/images/Bookmark-red.svg" alt="Bookmark">
+                            Профессиональный менеджмент
+                        </li>
+                        <li class="flex flex-center items-center gap-2 py-2">
+                            <img class="w-5 h-5 mr-2 shrink-0" src="./src/images/Bookmark-red.svg" alt="Bookmark">
+                            Профессиональный менеджмент
+                        </li>
+                        <li class="flex flex-center items-center gap-2 py-2">
+                            <img class="w-5 h-5 mr-2 shrink-0" src="./src/images/Bookmark-red.svg" alt="Bookmark">
+                            Профессиональный менеджмент
+                        </li>
+                        <li class="flex flex-center items-center gap-2 py-2">
+                            <img class="w-5 h-5 mr-2 shrink-0" src="./src/images/Bookmark-white.svg" alt="Bookmark">
+                            Профессиональный менеджмент
+                        </li>
+                    </ul>
+                    <button class="w-full bg-bg-light px-2 py-2 mt-auto rounded-lg text-txt-card-dark text-lg font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">Начать</button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР КОНТАКТЫ?-->
+
+    <footer class="w-full bg-bg-light" id="contacts">
+        <div class="max-w-7xl mx-auto px-8 py-8 md:py-12">
+            <nav class="flex flex-col items-start gap-4">
+                <a href="#install" class="text-txt-card-dark text-base font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">О приложении</a>
+                <a href="#about" class="text-txt-card-dark text-base font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">О нас</a>
+                <a href="#" class="text-txt-card-dark text-base font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">Политика конфиденциальности</a>
+                <a href="#" class="text-txt-card-dark text-base font-normal hover:scale-105 transition-transform duration-300 cursor-pointer">iT-CALLBACK 2026</a>
+            </nav>
+        </div>
+    </footer>
+
+    <button id="toTop" title="Наверх" class="fixed bottom-10 right-10 hidden rounded-full text-black border border-bg-dark bg-bg-main px-4 py-3 font-bold font-xl hover:scale-105 transition-transform duration-300 cursor-pointer">↑</button>
+
+    <script src="./script.js"></script>
+</body>
+</html>
