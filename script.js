@@ -1,5 +1,6 @@
 const burger = document.getElementById('burger');
 const nav = document.getElementById('nav');
+const navLinks = document.querySelectorAll('nav a');
 
 const toTop = document.getElementById('toTop');
 
@@ -8,10 +9,20 @@ const knob = document.getElementById('knob');
 const labelMonth = document.getElementById('labelMonth');
 const labelYear = document.getElementById('labelYear');
 
+const privacyLink = document.getElementById('privacy-link');
+const privacyModal = document.getElementById('privacy-modal');
+const closePrivacy = document.getElementById('close-privacy');
+
 // БУРГЕР-МЕНЮ
 
 burger.addEventListener('click', () => {
     nav.classList.toggle('hidden');
+});
+// Закрытие меню при клике на ссылку
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.add('hidden'); // Принудительно скрываем меню
+    });
 });
 
 // КНОПКА НАВЕРХ
@@ -59,3 +70,23 @@ toggle.addEventListener('click', () => {
     updatePrices();
 });
 
+// ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+
+privacyLink.addEventListener('click', (e) => {
+    e.preventDefault(); // Отменяем переход по ссылке
+    privacyModal.classList.remove('hidden');
+    privacyModal.classList.add('flex'); // Чтобы модалка появилась
+});
+
+closePrivacy.addEventListener('click', () => {
+    privacyModal.classList.add('hidden');
+    privacyModal.classList.remove('flex');
+});
+
+// Закрытие при клике на темный фон
+privacyModal.addEventListener('click', (e) => {
+    if (e.target === privacyModal) {
+        privacyModal.classList.add('hidden');
+        privacyModal.classList.remove('flex');
+    }
+});

@@ -16,17 +16,17 @@
     <header class="w-full bg-bg-main">
         <div class="max-w-7xl mx-auto px-4 lg:px-16 py-8 lg:py-12 flex justify-between items-center relative">
             <a href="#" class="text-2xl font-extrabold whitespace-nowrap hover:scale-105 transition-transform duration-300 cursor-pointer">iT-<span class="text-txt-logo">CALLBACK.</span></a>
-            <button class="w-14 h-12 flex flex-col items-center justify-center gap-2 border border-bg-dark rounded md:hidden hover:scale-105 transition-transform duration-300 cursor-pointer" id="burger">
+            <button class="w-14 h-12 flex flex-col items-center justify-center gap-2 border border-2 border-bg-dark rounded md:hidden hover:scale-105 transition-transform duration-300 cursor-pointer" id="burger">
                 <span class="block h-0.5 w-8 bg-black transition-all"></span>
                 <span class="block h-0.5 w-8 bg-black transition-all"></span>
                 <span class="block h-0.5 w-8 bg-black transition-all"></span>
             </button>
-            <nav class="absolute top-[calc(100%-2rem)] right-4 bg-bg-light flex flex-col gap-4 p-5 rounded hidden md:w-auto md:relative md:top-auto md:right-0 md:bg-transparent md:flex md:flex-row md:gap-6 md:items-center md:px-0" id="nav">
-                <a href="#main" class="text-sm lg:text-base text-black font-medium hover:scale-105 transition-transform duration-300 cursor-pointer ">Главная</a>
-                <a href="#courses" class="text-sm lg:text-base text-black font-medium hover:scale-105 transition-transform duration-300 cursor-pointer">Курсы</a>
-                <a href="#prices" class="text-sm lg:text-base text-black font-medium hover:scale-105 transition-transform duration-300 cursor-pointer">Цены</a>
-                <a href="#contacts" class="text-sm lg:text-base text-black font-medium hover:scale-105 transition-transform duration-300 cursor-pointer">Контакты</a>
-                <a href="#install" class="text-sm lg:text-base text-black font-medium bg-bg-dark px-6 py-2 rounded-xl hover:scale-105 transition-transform duration-300 cursor-pointer">Попробовать бесплатно</a>
+            <nav class="absolute top-[calc(100%-2rem)] right-4 bg-bg-dark flex flex-col rounded border border-bg-dark hidden md:w-auto md:relative md:top-auto md:right-0 md:bg-transparent md:flex md:flex-row md:gap-6 md:items-center md:px-0" id="nav">
+                <a href="#main" class="text-sm lg:text-base text-black font-medium bg-bg-main px-4 py-2 border border-bg-dark rounded hover:scale-105 transition-transform duration-300 cursor-pointer ">Главная</a>
+                <a href="#courses" class="text-sm lg:text-base text-black font-medium bg-bg-main px-4 py-2 border border-bg-dark rounded hover:scale-105 transition-transform duration-300 cursor-pointer">Курсы</a>
+                <a href="#prices" class="text-sm lg:text-base text-black font-medium bg-bg-main px-4 py-2 border border-bg-dark rounded hover:scale-105 transition-transform duration-300 cursor-pointer">Цены</a>
+                <a href="#contacts" class="text-sm lg:text-base text-black font-medium bg-bg-main px-4 py-2 border border-bg-dark rounded hover:scale-105 transition-transform duration-300 cursor-pointer">Контакты</a>
+                <a href="#install" class="text-sm lg:text-base text-black font-medium bg-bg-light px-4 py-2 border border-bg-dark rounded hover:scale-105 transition-transform duration-300 cursor-pointer whitespace-normal max-w-[130px] text-center md:max-w-none md:whitespace-nowrap">Попробовать бесплатно</a>
             </nav>
         </div>
     </header>
@@ -228,11 +228,25 @@
             <nav class="flex flex-col items-start gap-4">
                 <a href="#install" class="text-txt-card-dark text-base font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">О приложении</a>
                 <a href="#about" class="text-txt-card-dark text-base font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">О нас</a>
-                <a href="#" class="text-txt-card-dark text-base font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">Политика конфиденциальности</a>
+                <a href="#" id="privacy-link" class="text-txt-card-dark text-base font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">Политика конфиденциальности</a>
                 <a href="#" class="text-txt-card-dark text-base font-normal hover:scale-105 transition-transform duration-300 cursor-pointer">iT-CALLBACK 2026</a>
             </nav>
         </div>
     </footer>
+
+    <div id="privacy-modal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-xl max-w-2xl w-full max-h-[80vh] flex flex-col relative">
+            <!-- Кнопка закрытия -->
+            <button id="close-privacy" class="absolute top-4 right-4 text-slate-500 hover:text-black text-2xl cursor-pointer">&times;</button>
+            
+            <!-- Контент -->
+            <div class="p-6 md:p-8 overflow-y-auto">
+                <h2 class="text-2xl font-bold mb-4">Политика конфиденциальности</h2>
+                <p class="text-sm text-slate-600 mb-4">Здесь текст вашей политики...</p>
+                <!-- Текст -->
+            </div>
+        </div>
+    </div>
 
     <button id="toTop" title="Наверх" class="fixed bottom-10 right-10 hidden rounded-full text-black border border-bg-dark bg-bg-main px-4 py-3 font-bold font-xl hover:scale-105 transition-transform duration-300 cursor-pointer">↑</button>
 
